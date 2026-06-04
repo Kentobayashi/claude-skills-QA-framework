@@ -21,7 +21,36 @@ Cost estimate: ~$0.18 per skill, ~2-3 min per skill with 8000 output tokens.
 SKILLS = [
 
     # ─────────────────────────────────────────────────────────────
-    # prosma Skill Library — profilpilot (consultant short-profile tailoring)
+    # prosma Skill Library
+    # ─────────────────────────────────────────────────────────────
+    {
+        "name": "humanizer",
+        "category": "Core",
+        "folder": "humanizer",
+        "trigger_pos": [
+            "Kannst du diesen Text humanisieren? Er klingt zu sehr nach ChatGPT.\n\nIn der heutigen schnelllebigen digitalen Welt spielt die Fähigkeit, fokussiert zu arbeiten, eine zunehmend entscheidende Rolle. Zudem stellt die nahtlose Integration moderner Tools einen wesentlichen Mehrwert dar und trägt maßgeblich zur ganzheitlichen Optimierung der Arbeitsprozesse bei.",
+            "This text sounds too polished and AI-generated. Can you make it sound more human?\n\nAI-assisted coding serves as an enduring testament to the transformative potential of large language models, marking a pivotal moment in the evolving landscape of software development. These groundbreaking tools—nestled at the intersection of research and practice—are reshaping how engineers ideate, iterate, and deliver, underscoring their vital role in modern workflows.",
+            "Bitte entferne die KI-Spuren aus diesem Absatz – er ist zu glatt geschrieben.\n\nDas idyllisch im Herzen der Altstadt gelegene Unternehmen besticht durch seine einzigartige Unternehmenskultur und verzaubert seine Mitarbeitenden mit einem beeindruckenden Arbeitsumfeld. Darüber hinaus fungiert es als Plattform für facettenreichen fachlichen Austausch und stellt somit einen wegweisenden Meilenstein in der modernen Arbeitswelt dar.",
+        ],
+        "trigger_neg": [
+            "Erstell mir eine neue Planner-Karte für das laufende Projekt.",
+            "Translate this paragraph from German to English.",
+        ],
+        "output_criteria": (
+            "Must detect the language of the provided text (German or English) and apply the matching pattern catalog. "
+            "Must produce a first rewrite that visibly removes AI writing patterns. "
+            "Must include a brief self-critique section identifying remaining AI tells. "
+            "Must produce a second, final rewrite based on the self-critique. "
+            "For German input: must address patterns like Nominalstil, KI-Lieblingswörter, "
+            "Partizipialphrasen, and hollow openers. "
+            "For English input: must address patterns like significance inflation, -ing endings, "
+            "AI vocabulary words, and em dash overuse. "
+            "Output must not itself sound AI-generated. "
+            "Generic rewrites without visible pattern removal score low."
+        ),
+    },
+
+    # profilpilot — consultant short-profile tailoring
     # Note: consultant names and internal phrasing are genericized for this
     # public example. The canonical, fully-specified definition lives in the
     # prosma skill repo.
