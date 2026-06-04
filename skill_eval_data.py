@@ -33,7 +33,7 @@ SKILLS = [
             "Bitte entferne die KI-Spuren aus diesem Absatz – er ist zu glatt geschrieben.\n\nDas idyllisch im Herzen der Altstadt gelegene Unternehmen besticht durch seine einzigartige Unternehmenskultur und verzaubert seine Mitarbeitenden mit einem beeindruckenden Arbeitsumfeld. Darüber hinaus fungiert es als Plattform für facettenreichen fachlichen Austausch und stellt somit einen wegweisenden Meilenstein in der modernen Arbeitswelt dar.",
         ],
         "trigger_neg": [
-            "Erstell mir eine neue Planner-Karte für das Atruvia-Projekt.",
+            "Erstell mir eine neue Planner-Karte für das laufende Projekt.",
             "Translate this paragraph from German to English.",
         ],
         "output_criteria": (
