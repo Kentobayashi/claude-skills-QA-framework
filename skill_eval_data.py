@@ -50,6 +50,42 @@ SKILLS = [
         ),
     },
 
+    # profilpilot — consultant short-profile tailoring
+    # Note: consultant names and internal phrasing are genericized for this
+    # public example. The canonical, fully-specified definition lives in the
+    # prosma skill repo.
+    # ─────────────────────────────────────────────────────────────
+    {
+        "name": "prosma_profilpilot",
+        "category": "Core",
+        "folder": "prosma_profilpilot",
+        # trigger_pos[0] also drives the output- and consistency-runs.
+        "trigger_pos": [
+            "Wir haben eine Ausschreibung für eine Projektleitung / PMO im öffentlichen Sektor "
+            "(Steuerung einer M365-Migration, Lieferantensteuerung, Stakeholdermanagement). "
+            "Bitte passe das Berater-Kurzprofil von [Berater:in] darauf an und gib mir die "
+            "copy-paste-fertigen Texte für alle Folien.",
+            "Ich brauche das Kurzprofil von [Berater:in] für eine Prozessberatungs-"
+            "Ausschreibung angepasst — kannst du das machen?",
+            "Für eine:n neue:n Kolleg:in gibt es noch keine Berater-Datenbank. "
+            "Kannst du anhand der alten Kurzprofile eine anlegen?",
+        ],
+        "trigger_neg": [
+            "Erstell mir eine neue Planner-Karte für das laufende Projekt.",
+            "Wie modelliere ich diesen End-to-End-Prozess sauber in BPMN 2.0?",
+        ],
+        "output_criteria": (
+            "Must produce copy-paste-ready German texts for a consultant short-profile "
+            "(PowerPoint) tailored to a specific tender: a title/role slide, a personal "
+            "profile, a 'best-fit candidate' section, a main project, and a project-reference "
+            "table. Must write in third person, avoid empty buzzwords and marketing clichés, "
+            "and back every claim with a concrete approach rather than a generic statement. "
+            "Must not invent facts (certificates, customers, dates, numbers) that aren't given "
+            "— it asks back or marks them as to-complete instead. "
+            "Generic, interchangeable profile text or invented specifics score low."
+        ),
+    },
+
     # ─────────────────────────────────────────────────────────────
     # EXAMPLE SKILL 1 — Replace with your own skills
     # ─────────────────────────────────────────────────────────────
